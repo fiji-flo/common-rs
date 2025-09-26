@@ -32,4 +32,4 @@ hyper = { version = "1", features = ["full"] }
 tower-http = { version = "0.6", features = ["trace"] }
 maplit = "1"
 pretty_assertions = "1"
-jsonschema = "0.31"
+jsonschema = "0.33"
