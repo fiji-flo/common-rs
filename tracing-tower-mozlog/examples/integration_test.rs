@@ -7,7 +7,7 @@
 //!
 //! Run with: `cargo run --example integration_test`
 
-use axum::{extract::Path, http::StatusCode, response::Json, routing::get, Router};
+use axum::{Router, extract::Path, http::StatusCode, response::Json, routing::get};
 use serde::{Deserialize, Serialize};
 use std::{
     io::Write,

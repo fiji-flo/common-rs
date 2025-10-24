@@ -1,15 +1,15 @@
 use axum::{
+    Router,
     body::Body,
     http::{Method, Request, StatusCode},
     response::{IntoResponse, Response},
     routing::get,
-    Router,
 };
 use pretty_assertions::assert_eq;
 use serde_json::json;
 use tower::ServiceExt;
 
-use crate::utils::{log_test_async, LogWatcher};
+use crate::utils::{LogWatcher, log_test_async};
 use tracing_tower_mozlog::MozLogLayer;
 
 async fn handler_status_echo(

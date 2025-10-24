@@ -8,11 +8,11 @@
 //! Run with: `cargo run --example axum_basic`
 
 use axum::{
+    Router,
     extract::Path,
     http::StatusCode,
     response::{IntoResponse, Json},
     routing::{get, post},
-    Router,
 };
 use serde::{Deserialize, Serialize};
 

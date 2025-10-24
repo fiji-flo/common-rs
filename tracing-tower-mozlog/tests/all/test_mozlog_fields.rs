@@ -1,8 +1,8 @@
-use crate::utils::{log_test, LogWatcher};
+use crate::utils::{LogWatcher, log_test};
 use maplit::hashmap;
 use pretty_assertions::assert_eq;
 use serde_json::json;
-use tracing::{event, span, Level};
+use tracing::{Level, event, span};
 use tracing_tower_mozlog::MozLogMessage;
 
 #[test]

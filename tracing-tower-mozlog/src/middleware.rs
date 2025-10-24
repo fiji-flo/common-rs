@@ -174,7 +174,7 @@ mod tests {
     use super::*;
     use http::{Method, StatusCode};
     use std::convert::Infallible;
-    use tower::{service_fn, ServiceExt};
+    use tower::{ServiceExt, service_fn};
 
     #[tokio::test]
     async fn test_successful_request() {

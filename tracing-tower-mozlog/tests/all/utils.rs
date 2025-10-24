@@ -7,7 +7,7 @@ use std::{
     sync::{Arc, Mutex},
 };
 use tracing::Subscriber;
-use tracing_subscriber::{fmt::MakeWriter, layer::SubscriberExt, Registry};
+use tracing_subscriber::{Registry, fmt::MakeWriter, layer::SubscriberExt};
 use tracing_tower_mozlog::{JsonStorageLayer, MozLogFormatLayer, MozLogMessage};
 
 /// Run a closure in an environment configured to use [`MozLogFormatLayer`], and return

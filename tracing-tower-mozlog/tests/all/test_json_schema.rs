@@ -1,10 +1,10 @@
 use std::sync::LazyLock;
 
-use jsonschema::{validator_for, Validator};
+use jsonschema::{Validator, validator_for};
 use serde_json::Value;
-use tracing::{event, span, Level};
+use tracing::{Level, event, span};
 
-use crate::utils::{log_test, LogWatcher};
+use crate::utils::{LogWatcher, log_test};
 
 static MOZLOG_SCHEMA: LazyLock<Validator> =
     LazyLock::new(|| validator_for(&PARSED_SCHEMA).expect("schema is in invalid format"));
